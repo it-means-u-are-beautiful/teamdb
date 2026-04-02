@@ -78,3 +78,4 @@ Options:
   --include-template   Also validate files in .template/
   -h, --help           Show this help message
 ''');
+}

@@ -1,0 +1,40 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+	validator-tests:
+		runs-on: ubuntu-latest
+		defaults:
+			run:
+				working-directory: validator
+		steps:
+			- name: Checkout
+				uses: actions/checkout@v4
+
+			- name: Setup Dart
+				uses: dart-lang/setup-dart@v1
+
+			- name: Install dependencies
+				run: dart pub get
+
+			- name: Run tests
+				run: dart test
+
+	schema-validation:
+		runs-on: ubuntu-latest
+		defaults:
+			run:
+				working-directory: validator
+		steps:
+			- name: Checkout
+				uses: actions/checkout@v4
+
+			- name: Setup Dart
+				uses: dart-lang/setup-dart@v1
+
+			- name: Install dependencies
+				run: dart pub get
+
+			- name: Validate TeamDB files
+				run: dart run bin/validator.dart --root ..

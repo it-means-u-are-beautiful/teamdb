@@ -1,0 +1,48 @@
+{
+  "$schema": "https://specs.frictionlessdata.io/schemas/table-schema.json",
+  "name": "members",
+  "title": "Team members.csv schema",
+  "missingValues": [
+    ""
+  ],
+  "fields": [
+    {
+      "name": "discord_name",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "minLength": 1,
+        "maxLength": 64
+      }
+    },
+    {
+      "name": "vrc_name",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "minLength": 1,
+        "maxLength": 64
+      }
+    },
+    {
+      "name": "runstyle",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "minLength": 2,
+        "maxLength": 32
+      }
+    },
+    {
+      "name": "role",
+      "type": "integer",
+      "constraints": {
+        "required": true,
+        "minimum": 0
+      }
+    }
+  ],
+  "primaryKey": [
+    "discord_name"
+  ]
+}

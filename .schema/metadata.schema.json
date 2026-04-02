@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://urs.teamdb/schemas/metadata.schema.json",
+  "title": "Team metadata.yaml schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "team_handle",
+    "team_fqdn",
+    "team_icon_url",
+    "team_blurb"
+  ],
+  "properties": {
+    "team_handle": {
+      "type": "string",
+      "description": "Team shorthand/identifier (3-4 ASCII characters).",
+      "minLength": 3,
+      "maxLength": 4,
+      "pattern": "^[\\x20-\\x7E]{3,4}$"
+    },
+    "team_fqdn": {
+      "type": "string",
+      "description": "Full team name.",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "team_icon_url": {
+      "type": "string",
+      "description": "Absolute HTTPS URL or local relative path beginning with ./",
+      "pattern": "^(https:\\/\\/.+|\\./.+)$"
+    },
+    "team_blurb": {
+      "type": "string",
+      "description": "Short team description.",
+      "minLength": 1,
+      "maxLength": 256
+    }
+  }
+}

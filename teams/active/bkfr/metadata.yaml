@@ -2,11 +2,11 @@
 # Brightling and other URS Online Services are expecting this file and format, so do NOT diverge from this format.
 
 # team handles are your team shorthands/identifiers, must be 3-4 characters, ASCII only.
-team_handle: EXM1
+team_handle: BKFR
 # the full name of your team, no character limit but we encourage to keep it within 32 characters.
-team_fqdn: Example Team
+team_fqdn: BackFire
 # URL of your team icon, must be transparent and the icon resolution must be a power-of-two resolution
 # If you want to include your own icon alongside your team database, make sure to use "./" instead (ex: ./example.png).
 team_icon_url: https://example.com/favicon.png
 # A short blurb about your team, maximum 256 characters.
-team_blurb: This is an example team manifest that bots and the URS Online Services will read for your team description.
+team_blurb: We are a competitive VRC touge racing team that has somehow stumbled into opening an uma team. We welcome anyone interested in learning touge racing or just wanting to become friends!
